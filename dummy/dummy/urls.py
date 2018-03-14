@@ -29,11 +29,8 @@ from django.urls import path
 from django.contrib import admin
 admin.autodiscover()
 
-from answer_generator.views import PdfFileView
-
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home_page.html'), name='home_page'),
-    url(r'^answer_generator/upload/', PdfFileView.as_view(), name='pdf_file_upload'), 
     path('answer_generator/', include('answer_generator.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
