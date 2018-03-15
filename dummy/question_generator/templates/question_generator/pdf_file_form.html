@@ -11,7 +11,7 @@
 	</head>
 	<body>
 	<p>Please upload the text to generate the question paper</p>
-	<form action="{% url 'pdf_file_upload_question' %}" method="post" enctype="multipart/form-data">
+	<form action="{% url 'question_generator:pdf_file_upload_question' %}" method="post" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ form.as_p }}
 		<input type="submit" value="submit" />

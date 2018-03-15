@@ -4,14 +4,14 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Profile Pic</title>
+		<title>PDF Upload answer_question</title>
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/.../css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	</head>
 	<body>
 	<p>AcadAI</p>
-	<form action="{% url 'pdf_file_upload' %}" method="post" enctype="multipart/form-data">
+	<form action="{% url 'answer_generator:pdf_file_upload' %}" method="post" enctype="multipart/form-data">
 	{% csrf_token %}
 	{{ form.as_p }}
 		<input type="submit" value="submit" />

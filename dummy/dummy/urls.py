@@ -31,8 +31,8 @@ admin.autodiscover()
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home_page.html'), name='home_page'),
-    path('question_generator/', include('question_generator.urls')),
-    path('answer_generator/', include('answer_generator.urls')),
+    path('question_generator/', include('question_generator.urls', namespace='question_generator'), name='question_generator'),
+    path('answer_generator/', include('answer_generator.urls' , namespace='answer_generator'), name='answer_generator'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('django.contrib.auth.urls')),

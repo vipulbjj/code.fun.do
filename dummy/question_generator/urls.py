@@ -3,6 +3,8 @@ from django.urls import path
 from . import views
 from question_generator.views import PdfFileView
 
+app_name = 'question_generator'
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('question_paper', views.question_paper,  name='question_paper'),
