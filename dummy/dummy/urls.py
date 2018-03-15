@@ -31,6 +31,7 @@ admin.autodiscover()
 
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home_page.html'), name='home_page'),
+    path('question_generator/', include('question_generator.urls')),
     path('answer_generator/', include('answer_generator.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
